@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!-- 在 action 的 URL 后面加上 / ，将 GET 方法改为 POST -->
+<form action="get_info/" method="post">
+    <!-- csrf_token 是 Django 提供的防止伪装提交请求功能的中间件
+		 使用 POST 方法提交表格时，必须有这个标签 -->
+    {% csrf_token %}
+    <input name="message" type="text">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

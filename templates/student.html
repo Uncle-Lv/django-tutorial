@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取结果</title>
+</head>
+<body>
+<h2>所有学生</h2>
+<ul>
+    {% for student in all %}
+        <li>{{ student.id }}   {{ student.name }}</li>
+    {% endfor %}
+</ul>
+<h2>筛选名字为李四的学生</h2>
+<ul>
+    {% for student in filter %}
+        <li>{{ student.id }}   {{ student.name }}</li>
+    {% endfor %}
+</ul>
+<h2>返回 id 为 1 的学生</h2>
+<ul>
+    <li>{{ single.id }}   {{ single.name }}</li>
+</ul>
+<h2>返回前两行，按名字排序</h2>
+<ul>
+    {% for student in limit %}
+        <li>{{ student.id }}   {{ student.name }}</li>
+    {% endfor %}
+</ul>
+<h2>按 id 排序</h2>
+<ul>
+    {% for student in order %}
+        <li>{{ student.id }}   {{ student.name }}</li>
+    {% endfor %}
+</ul>
+<h2>筛选名字为张三的学生，并按 id 排序</h2>
+<ul>
+    {% for student in order_filter %}
+        <li>{{ student.id }}   {{ student.name }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
